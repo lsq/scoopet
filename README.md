@@ -1,6 +1,7 @@
 # 🍨 Scoopet 🍨
 
-[![Excavator](https://github.com/ivaquero/scoopet/actions/workflows/ci.yml/badge.svg)](https://github.com/ivaquero/scoopet/actions/workflows/ci.yml)
+[![Excavator](https://github.com/lsq/scoopet/actions/workflows/schedule.yml/badge.svg)](https://github.com/lsq/scoopet/actions/workflows/schedule.yml)
+[![Build status](https://ci.appveyor.com/api/projects/status/0kq8cy09ou8i8ga9/branch/master?svg=true)](https://ci.appveyor.com/project/lsq/scoopet/branch/master)
 [![license](https://img.shields.io/github/license/ivaquero/scoopet)](https://github.com/ivaquero/scoopet/blob/master/LICENSE)
 [![code size](https://img.shields.io/github/languages/code-size/ivaquero/scoopet.svg)](https://img.shields.io/github/languages/code-size/ivaquero/scoopet.svg)
 [![repo size](https://img.shields.io/github/repo-size/ivaquero/scoopet.svg)](https://img.shields.io/github/repo-size/ivaquero/scoopet.svg)
