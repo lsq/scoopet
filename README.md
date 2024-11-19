@@ -1,6 +1,7 @@
 # 🍨 Scoopet 🍨
 
-[![Excavator](https://github.com/ivaquero/scoopet/actions/workflows/ci.yml/badge.svg)](https://github.com/ivaquero/scoopet/actions/workflows/ci.yml)
+[![Excavator](https://github.com/lsq/scoopet/actions/workflows/schedule.yml/badge.svg)](https://github.com/lsq/scoopet/actions/workflows/schedule.yml)
+[![Build status](https://ci.appveyor.com/api/projects/status/0kq8cy09ou8i8ga9/branch/master?svg=true)](https://ci.appveyor.com/project/lsq/scoopet/branch/master)
 [![license](https://img.shields.io/github/license/ivaquero/scoopet)](https://github.com/ivaquero/scoopet/blob/master/LICENSE)
 [![code size](https://img.shields.io/github/languages/code-size/ivaquero/scoopet.svg)](https://img.shields.io/github/languages/code-size/ivaquero/scoopet.svg)
 [![repo size](https://img.shields.io/github/repo-size/ivaquero/scoopet.svg)](https://img.shields.io/github/repo-size/ivaquero/scoopet.svg)
@@ -123,37 +124,38 @@ scoop config aria2-min-split-size 4M
 
 ### Research Tools
 
-|        App         | Auto-Update ? |                        Original ?                         |
-| :----------------: | :-----------: | :-------------------------------------------------------: |
-|        Buzz        |       ✓       |                             ✓                             |
-| Jupyterlab-Desktop |       ✓       |  modified [gdm257](https://github.com/gdm257/scoop-257)   |
-|      KingDraw      |       ✓       |                             ✓                             |
-|  Mendeley-Desktop  |       ✓       |                             ✓                             |
-|      NetLogo       |       ✓       |                             ✓                             |
-|  OpenBB-Terminal   |       ✓       |                             ✓                             |
-|     SciHubEVA      |       ✓       |                             ✓                             |
-|      TeXLive       |       ✓       | modified [chawyehsu](https://github.com/chawyehsu/dorado) |
+|        App         | Auto-Update ? |                              Original ?                               |
+| :----------------: | :-----------: | :-------------------------------------------------------------------: |
+|        Buzz        |       ✓       | copied from [anderlli0053](https://github.com/anderlli0053/DEV-tools) |
+| Jupyterlab-Desktop |       ✓       |        modified [gdm257](https://github.com/gdm257/scoop-257)         |
+|      KingDraw      |       ✓       |                                   ✓                                   |
+|  Mendeley-Desktop  |       ✓       |                                   ✓                                   |
+|      NetLogo       |       ✓       |                                   ✓                                   |
+|  OpenBB-Terminal   |       ✓       |                                   ✓                                   |
+|     SciHubEVA      |       ✓       |                                   ✓                                   |
+|      TeXLive       |       ✓       |       modified [chawyehsu](https://github.com/chawyehsu/dorado)       |
 
 ### Development Auxiliary
 
-|          App           | Auto-Update ? |                        Original ?                         |
-| :--------------------: | :-----------: | :-------------------------------------------------------: |
-|        ChatBox         |       ✓       |                             ✓                             |
-|      Doxygen-GUI       |       ✓       |                             ✓                             |
-|         PDF4QT         |       ✓       |                             ✓                             |
-|      Pot-Desktop       |       ✓       |                             ✓                             |
-|      RectangleWin      |       ✓       |                             ✓                             |
-|        Veracypt        |       ✓       |                             ✓                             |
-|         WinRAR         |       ✓       |                             ✓                             |
-|      WiseCare365       |       ✓       |                             ✓                             |
-|    WIFI-Crack-Tool     |       ✓       |                             ✓                             |
-| VMware-Workstation-Pro |       ✓       | modified [Ash258](https://github.com/Ash258/Scoop-Ash258) |
+|          App           | Auto-Update ? |                         Original ?                          |
+| :--------------------: | :-----------: | :---------------------------------------------------------: |
+|      AutoDarkMode      |       ✓       |                              ✓                              |
+|        ChatBox         |       ✓       |                              ✓                              |
+|      Doxygen-GUI       |       ✓       |                              ✓                              |
+|        escrcpy         |       ✓       |   copied from [DoveBoy](hhttps://github.com/DoveBoy/Apps)   |
+|     FileCentipede      |       ✓       |                      ✓ (by @CronusLM)                       |
+|      Pot-Desktop       |       ✓       |                              ✓                              |
+|      RectangleWin      |       ✓       |                              ✓                              |
+|        Veracypt        |       ✓       |                              ✓                              |
+|         Viber          |       ✓       | copied from [okibcn](https://github.com/okibcn/ScoopMaster) |
+|         WinRAR         |       ✓       |                              ✓                              |
+|      WiseCare365       |       ✓       |                              ✓                              |
+| VMware-Workstation-Pro |       ✓       |  modified [Ash258](https://github.com/Ash258/Scoop-Ash258)  |
 
 ### Windows-Only
 
 |       App       | Auto-Update ? |                       Original ?                        |
 | :-------------: | :-----------: | :-----------------------------------------------------: |
-|  AutoDarkMode   |       ✓       |                            ✓                            |
 | LKY-Officetools |       ✓       | copied from [DoveBoy](hhttps://github.com/DoveBoy/Apps) |
 |  RectangleWin   |       ✓       |                            ✓                            |
 
@@ -163,13 +165,3 @@ scoop config aria2-min-split-size 4M
 | :---------: | :-----------: | :--------: |
 | MicroMamba  |       ✓       |     ✓      |
 | N-m3u8DL-RE |       ✓       |     ✓      |
-|    serpl    |       ✓       |     ✓      |
-
-## Notes
-
-Due to the complexity of Win to permission management, for some common applications that do not provide portable installation packages and require administrator application permissions, it is recommended to use WinGet for installation
-
-```powershell
-scoop install winget
-winget install Rakuten.Viber
-```

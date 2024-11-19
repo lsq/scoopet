@@ -125,39 +125,38 @@ scoop config aria2-min-split-size 4M
 
 ### 科研工具
 
-|        App         | 自动更新 |                          原创                           |
-| :----------------: | :------: | :-----------------------------------------------------: |
-|        Buzz        |    ✓     |                            ✓                            |
-| Jupyterlab-Desktop |    ✓     |  修改自 [gdm257](https://github.com/gdm257/scoop-257)   |
-|      KingDraw      |    ✓     |                            ✓                            |
-|  Mendeley-Desktop  |    ✓     |                            ✓                            |
-|      NetLogo       |    ✓     |                            ✓                            |
-|  OpenBB-Terminal   |    ✓     |                            ✓                            |
-|     SciHubEVA      |    ✓     |                            ✓                            |
-|      TeXLive       |    ✓     | 修改自 [chawyehsu](https://github.com/chawyehsu/dorado) |
+|        App         | 自动更新 |                               原创                               |
+| :----------------: | :------: | :--------------------------------------------------------------: |
+|        Buzz        |    ✓     | 复制于 [anderlli0053](https://github.com/anderlli0053/DEV-tools) |
+| Jupyterlab-Desktop |    ✓     |       修改自 [gdm257](https://github.com/gdm257/scoop-257)       |
+|      KingDraw      |    ✓     |                                ✓                                 |
+|  Mendeley-Desktop  |    ✓     |                                ✓                                 |
+|      NetLogo       |    ✓     |                                ✓                                 |
+|  OpenBB-Terminal   |    ✓     |                                ✓                                 |
+|     SciHubEVA      |    ✓     |                                ✓                                 |
+|      TeXLive       |    ✓     |     修改自 [chawyehsu](https://github.com/chawyehsu/dorado)      |
 
 ### 日常工作
 
 |          App           | 自动更新 |                          原创                           |
 | :--------------------: | :------: | :-----------------------------------------------------: |
 |      Alist-Helper      |    ✓     |                            ✓                            |
+|      AutoDarkMode      |    ✓     |                            ✓                            |
 |        ChatBox         |    ✓     |                            ✓                            |
 |      Doxygen-GUI       |    ✓     |                            ✓                            |
+|        escrcpy         |    ✓     |   复制于 [DoveBoy](hhttps://github.com/DoveBoy/Apps)    |
 |     FileCentipede      |    ✓     |                    ✓ (by @CronusLM)                     |
-|         PDF4QT         |    ✓     |                            ✓                            |
 |      Pot-Desktop       |    ✓     |                            ✓                            |
 |        Veracypt        |    ✓     |                            ✓                            |
 |         Viber          |    ✓     | 复制于 [okibcn](https://github.com/okibcn/ScoopMaster)  |
 |         WinRAR         |    ✓     |                            ✓                            |
 |      WiseCare365       |    ✓     |                            ✓                            |
-|    WIFI-Crack-Tool     |    ✓     |                            ✓                            |
 | VMware-Workstation-Pro |    ✓     | 修改自 [Ash258](https://github.com/Ash258/Scoop-Ash258) |
 
 ### Windows 专属
 
 |       App       | 自动更新 |                        原创                        |
 | :-------------: | :------: | :------------------------------------------------: |
-|  AutoDarkMode   |    ✓     |                         ✓                          |
 | LKY-Officetools |    ✓     | 复制于 [DoveBoy](hhttps://github.com/DoveBoy/Apps) |
 |  RectangleWin   |    ✓     |                         ✓                          |
 
@@ -167,7 +166,6 @@ scoop config aria2-min-split-size 4M
 | :---------: | :------: | :---: |
 | MicroMamba  |    ✓     |   ✓   |
 | N-m3u8DL-RE |    ✓     |   ✓   |
-|    serpl    |    ✓     |   ✓   |
 
 ### 国人产品
 
@@ -182,6 +180,7 @@ scoop config aria2-min-split-size 4M
 |   DashPlayer    |     DashPlayer      |    ✓     |                            ✓                            |
 |      钉钉       |      DingTalk       |    ✓     |                            ✓                            |
 |   哔哩下载姬    |       DownKyi       |    ✓     |                    ✓ (by @CronusLM)                     |
+|    磁盘精灵     |    DiskGenius-cn    |    ✓     |                    ✓ (by @CronusLM)                     |
 |    Edgeless     |      Edgeless       |    ✓     |                   ✓ (by @IsaacWangTT)                   |
 |    亿图图示     |      edrawmax       |    ✓     |                            ✓                            |
 |    欧路词典     |        Eudic        |    ✓     |                            ✓                            |
@@ -220,9 +219,9 @@ scoop config aria2-min-split-size 4M
 |    Kicad-cn    |    ✓     |   ✓   |
 | LibreOffice-cn |    ✓     |   ✓   |
 |     LyX-cn     |    ✓     |   ✓   |
+| Mambaforge-cn  |    ✓     |   ✓   |
 | MicroMamba-cn  |    ✓     |   ✓   |
 |  Miniconda-cn  |    ✓     |   ✓   |
-|  Miniforge-cn  |    ✓     |   ✓   |
 | OBS-Studio-cn  |    ✓     |   ✓   |
 |   Octave-cn    |    ✓     |   ✓   |
 | Qt-Creator-cn  |    ✓     |   ✓   |
@@ -237,5 +236,5 @@ scoop config aria2-min-split-size 4M
 
 ```powershell
 scoop install winget
-winget install Rakuten.Viber
+winget install Tencent.QQ
 ```
