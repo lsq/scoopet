@@ -24,7 +24,7 @@
             "#Invoke-ExternalCommand \"$dir/uninstall.exe\" -ArgumentList '/S' -RunAs | Out-Null",
             "$servername = 'WeaselServer'",
             "$value = \"$dir\\WeaselServer.exe\"",
-            "Start-Porcess -Wait \"$value\" -ArgumentList '/q'",
+            "Start-Process -Wait \"$value\" -ArgumentList '/q'",
             "#New-ItemProperty -Path \"HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" -Name $servername -PropertyType String -Value $value -ErrorAction Stop",
             "Remove-ItemProperty -Path \"HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\"  -Name $servername",
             "#if ($cmd -eq 'uninstall') { reg import \"$dir\\uninstall-context.reg\" }"
