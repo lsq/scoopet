@@ -162,10 +162,13 @@ scoop config aria2-min-split-size 4M
 
 ### 命令行工具
 
-|     App     | 自动更新 | 原创  |
-| :---------: | :------: | :---: |
-| MicroMamba  |    ✓     |   ✓   |
-| N-m3u8DL-RE |    ✓     |   ✓   |
+|     App      | 自动更新 | 原创  |
+| :----------: | :------: | :---: |
+| LTeX-ls-Plus |    ✓     |   ✓   |
+|  MicroMamba  |    ✓     |   ✓   |
+| N-m3u8DL-RE  |    ✓     |   ✓   |
+|     pixi     |    ✓     |   ✓   |
+|    serpl     |    ✓     |   ✓   |
 
 ### 国人产品
 

@@ -161,7 +161,19 @@ scoop config aria2-min-split-size 4M
 
 ### CLI
 
-|     App     | Auto-Update ? | Original ? |
-| :---------: | :-----------: | :--------: |
-| MicroMamba  |       ✓       |     ✓      |
-| N-m3u8DL-RE |       ✓       |     ✓      |
+|     App      | Auto-Update ? | Original ? |
+| :----------: | :-----------: | :--------: |
+| LTeX-ls-Plus |       ✓       |     ✓      |
+|  MicroMamba  |       ✓       |     ✓      |
+| N-m3u8DL-RE  |       ✓       |     ✓      |
+|     pixi     |       ✓       |     ✓      |
+|    serpl     |       ✓       |     ✓      |
+
+## Notes
+
+Due to the complexity of Win to permission management, for some common applications that do not provide portable installation packages and require administrator application permissions, it is recommended to use WinGet for installation
+
+```powershell
+scoop install winget
+winget install Rakuten.Viber
+```
