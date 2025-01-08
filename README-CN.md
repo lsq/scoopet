@@ -97,14 +97,13 @@ scoop bucket known
 main [默认]
 extras [墙裂推荐]
 versions
-nightlies
 nirsoft
+sysinternals
 php
 nerd-fonts
 nonportable
 java
 games
-jetbrains
 ```
 
 ## :m: 其他
@@ -144,7 +143,7 @@ scoop config aria2-min-split-size 4M
 |      AutoDarkMode      |    ✓     |                            ✓                            |
 |        ChatBox         |    ✓     |                            ✓                            |
 |      Doxygen-GUI       |    ✓     |                            ✓                            |
-|        escrcpy         |    ✓     |   复制于 [DoveBoy](hhttps://github.com/DoveBoy/Apps)    |
+|  Navicat-Premium-Lite  |    ✓     |                            ✓                            |
 |     FileCentipede      |    ✓     |                    ✓ (by @CronusLM)                     |
 |      Pot-Desktop       |    ✓     |                            ✓                            |
 |        Veracypt        |    ✓     |                            ✓                            |
@@ -162,13 +161,13 @@ scoop config aria2-min-split-size 4M
 
 ### 命令行工具
 
-|     App      | 自动更新 | 原创  |
-| :----------: | :------: | :---: |
-| LTeX-ls-Plus |    ✓     |   ✓   |
-|  MicroMamba  |    ✓     |   ✓   |
-| N-m3u8DL-RE  |    ✓     |   ✓   |
-|     pixi     |    ✓     |   ✓   |
-|    serpl     |    ✓     |   ✓   |
+|     App      | 自动更新 | 原创 |
+| :----------: | :------: | :--: |
+| LTeX-ls-Plus |    ✓     |  ✓   |
+|  MicroMamba  |    ✓     |  ✓   |
+| N-m3u8DL-RE  |    ✓     |  ✓   |
+|     pixi     |    ✓     |  ✓   |
+|    serpl     |    ✓     |  ✓   |
 
 ### 国人产品
 
@@ -210,28 +209,28 @@ scoop config aria2-min-split-size 4M
 
 ### 开源镜像
 
-|      App       | 自动更新 | 原创  |
-| :------------: | :------: | :---: |
-|   Blender-cn   |    ✓     |   ✓   |
-|   FreeCAD-cn   |    ✓     |   ✓   |
-|     Git-cn     |    ✓     |   ✓   |
-|    GIMP-cn     |    ✓     |   ✓   |
-|  GIMP@dev-cn   |    ✓     |   ✓   |
-|  Inkscape-cn   |    ✓     |   ✓   |
-|    Julia-cn    |    ✓     |   ✓   |
-|    Kicad-cn    |    ✓     |   ✓   |
-| LibreOffice-cn |    ✓     |   ✓   |
-|     LyX-cn     |    ✓     |   ✓   |
-| Mambaforge-cn  |    ✓     |   ✓   |
-| MicroMamba-cn  |    ✓     |   ✓   |
-|  Miniconda-cn  |    ✓     |   ✓   |
-| OBS-Studio-cn  |    ✓     |   ✓   |
-|   Octave-cn    |    ✓     |   ✓   |
-| Qt-Creator-cn  |    ✓     |   ✓   |
-|  SageMath-cn   |    ✓     |   ✓   |
-|  TeXStudio-cn  |    ✓     |   ✓   |
-|     VLC-cn     |    ✓     |   ✓   |
-|  VSCodium-cn   |    ✓     |   ✓   |
+|      App       | 自动更新 | 原创 |
+| :------------: | :------: | :--: |
+|   Blender-cn   |    ✓     |  ✓   |
+|   FreeCAD-cn   |    ✓     |  ✓   |
+|     Git-cn     |    ✓     |  ✓   |
+|    GIMP-cn     |    ✓     |  ✓   |
+|  GIMP@dev-cn   |    ✓     |  ✓   |
+|  Inkscape-cn   |    ✓     |  ✓   |
+|    Julia-cn    |    ✓     |  ✓   |
+|    Kicad-cn    |    ✓     |  ✓   |
+| LibreOffice-cn |    ✓     |  ✓   |
+|     LyX-cn     |    ✓     |  ✓   |
+| Mambaforge-cn  |    ✓     |  ✓   |
+| MicroMamba-cn  |    ✓     |  ✓   |
+|  Miniconda-cn  |    ✓     |  ✓   |
+| OBS-Studio-cn  |    ✓     |  ✓   |
+|   Octave-cn    |    ✓     |  ✓   |
+| Qt-Creator-cn  |    ✓     |  ✓   |
+|  SageMath-cn   |    ✓     |  ✓   |
+|  TeXStudio-cn  |    ✓     |  ✓   |
+|     VLC-cn     |    ✓     |  ✓   |
+|  VSCodium-cn   |    ✓     |  ✓   |
 
 ## 备注
 
@@ -240,4 +239,4 @@ scoop config aria2-min-split-size 4M
 ```powershell
 scoop install winget
 winget install Tencent.QQ
-```
+```

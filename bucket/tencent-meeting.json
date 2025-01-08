@@ -9,7 +9,7 @@
     "url": "https://updatecdn.meeting.qq.com/cos/51b163743b49cd3d04e4d552bc38800d/TencentMeeting_0300000000_3.30.11.434.publish.officialwebsite.exe#/dl.7z",
     "hash": "md5:51b163743b49cd3d04e4d552bc38800d",
     "post_install": [
-        "Rename-Item -Path \"$dir\\`$_*\" -NewName \"$version\" -Force",
+        "Get-ChildItem \"$dir\\`$_*\" | Rename-Item -NewName \"$version\" -Force",
         "Remove-Item \"$dir\\`$*\" -Recurse -Force -ErrorAction SilentlyContinue",
         "Remove-Item \"$dir\\wemeetapp_new.exe\" -Force -ErrorAction SilentlyContinue",
         "create_startmenu_shortcuts $manifest $original_dir $global $architecture",

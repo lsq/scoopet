@@ -98,14 +98,13 @@ scoop bucket known
 main [default]
 extras [strongly recommended]
 versions
-nightlies
 nirsoft
+sysinternals
 php
 nerd-fonts
 nonportable
 java
 games
-jetbrains
 ```
 
 ## :m: Trivial
@@ -137,20 +136,19 @@ scoop config aria2-min-split-size 4M
 
 ### Development Auxiliary
 
-|          App           | Auto-Update ? |                         Original ?                          |
-| :--------------------: | :-----------: | :---------------------------------------------------------: |
-|      AutoDarkMode      |       ✓       |                              ✓                              |
-|        ChatBox         |       ✓       |                              ✓                              |
-|      Doxygen-GUI       |       ✓       |                              ✓                              |
-|        escrcpy         |       ✓       |   copied from [DoveBoy](hhttps://github.com/DoveBoy/Apps)   |
-|     FileCentipede      |       ✓       |                      ✓ (by @CronusLM)                       |
-|      Pot-Desktop       |       ✓       |                              ✓                              |
-|      RectangleWin      |       ✓       |                              ✓                              |
-|        Veracypt        |       ✓       |                              ✓                              |
-|         Viber          |       ✓       | copied from [okibcn](https://github.com/okibcn/ScoopMaster) |
-|         WinRAR         |       ✓       |                              ✓                              |
-|      WiseCare365       |       ✓       |                              ✓                              |
-| VMware-Workstation-Pro |       ✓       |  modified [Ash258](https://github.com/Ash258/Scoop-Ash258)  |
+|          App           | Auto-Update ? |                        Original ?                         |
+| :--------------------: | :-----------: | :-------------------------------------------------------: |
+|        ChatBox         |       ✓       |                             ✓                             |
+|      Doxygen-GUI       |       ✓       |                             ✓                             |
+|  Navicat-Premium-Lite  |       ✓       |                             ✓                             |
+|         PDF4QT         |       ✓       |                             ✓                             |
+|      Pot-Desktop       |       ✓       |                             ✓                             |
+|      RectangleWin      |       ✓       |                             ✓                             |
+|        Veracypt        |       ✓       |                             ✓                             |
+|         WinRAR         |       ✓       |                             ✓                             |
+|      WiseCare365       |       ✓       |                             ✓                             |
+|    WIFI-Crack-Tool     |       ✓       |                             ✓                             |
+| VMware-Workstation-Pro |       ✓       | modified [Ash258](https://github.com/Ash258/Scoop-Ash258) |
 
 ### Windows-Only
 
@@ -176,4 +174,4 @@ Due to the complexity of Win to permission management, for some common applicati
 ```powershell
 scoop install winget
 winget install Rakuten.Viber
-```
+```
