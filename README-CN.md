@@ -239,4 +239,4 @@ scoop config aria2-min-split-size 4M
 ```powershell
 scoop install winget
 winget install Tencent.QQ
-```
+```

@@ -13,20 +13,16 @@
             "hash": "c57f32822a5e308962101cfdee0a2ccff49150cb625a968c64d1530e5f124719"
         }
     },
-    "post_install": "new-item \"$dir\\include\\bc_suffix.h\" -force",
-    "bin": [
-        "racket.exe",
-        "raco.exe"
+    "post_install": [
+        "rm -force \"$env:windir\\System32\\libracket*.dll\"",
+        "new-item \"$dir\\include\\bc_suffix.h\" -force",
+        "cp \"$dir\\lib\\libracket*.dll\" \"$env:windir\\System32\\\" -force "
     ],
+    "pre_uninstall": ["rm -force \"$env:windir\\System32\\libracket*.dll\""],
+    "bin": ["racket.exe", "raco.exe"],
     "shortcuts": [
-        [
-            "GRacket.exe",
-            "GRacket"
-        ],
-        [
-            "DrRacket.exe",
-            "DrRacket"
-        ]
+        ["GRacket.exe", "GRacket"],
+        ["DrRacket.exe", "DrRacket"]
     ],
     "checkver": {
         "url": "https://download.racket-lang.org/",
@@ -43,7 +39,7 @@
         },
         "hash": {
             "url": "https://download.racket-lang.org/releases/$version/",
-            "regex": "$basename[\\s\\S]*?\"checksum\">$sha1</span>"
-        }
-    }
-}
+            "regex": "$basename[\\s\\S]*?\"checksum\">$sha1</span>"
+        }
+    }
+}

@@ -174,4 +174,4 @@ Due to the complexity of Win to permission management, for some common applicati
 ```powershell
 scoop install winget
 winget install Rakuten.Viber
-```
+```
