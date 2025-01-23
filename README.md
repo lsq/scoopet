@@ -123,21 +123,23 @@ scoop config aria2-min-split-size 4M
 
 ### Research Tools
 
-|        App         | Auto-Update ? |                              Original ?                               |
-| :----------------: | :-----------: | :-------------------------------------------------------------------: |
-|        Buzz        |       ✓       | copied from [anderlli0053](https://github.com/anderlli0053/DEV-tools) |
-| Jupyterlab-Desktop |       ✓       |        modified [gdm257](https://github.com/gdm257/scoop-257)         |
-|      KingDraw      |       ✓       |                                   ✓                                   |
-|  Mendeley-Desktop  |       ✓       |                                   ✓                                   |
-|      NetLogo       |       ✓       |                                   ✓                                   |
-|  OpenBB-Terminal   |       ✓       |                                   ✓                                   |
-|     SciHubEVA      |       ✓       |                                   ✓                                   |
-|      TeXLive       |       ✓       |       modified [chawyehsu](https://github.com/chawyehsu/dorado)       |
+|        App         | Auto-Update ? |                        Original ?                         |
+| :----------------: | :-----------: | :-------------------------------------------------------: |
+| Jupyterlab-Desktop |       ✓       |  modified [gdm257](https://github.com/gdm257/scoop-257)   |
+|      KingDraw      |       ✓       |                             ✓                             |
+|  Mendeley-Desktop  |       ✓       |                             ✓                             |
+|      NetLogo       |       ✓       |                             ✓                             |
+|  OpenBB-Terminal   |       ✓       |                             ✓                             |
+|     SciHubEVA      |       ✓       |                             ✓                             |
+|      TeXLive       |       ✓       | modified [chawyehsu](https://github.com/chawyehsu/dorado) |
 
 ### Development Auxiliary
 
 |          App           | Auto-Update ? |                        Original ?                         |
 | :--------------------: | :-----------: | :-------------------------------------------------------: |
+|      Alist-Helper      |       ✓       |                             ✓                             |
+|          Buzz          |       ✓       |                             ✓                             |
+|     Cherry-Studio      |       ✓       |                             ✓                             |
 |        ChatBox         |       ✓       |                             ✓                             |
 |      Doxygen-GUI       |       ✓       |                             ✓                             |
 |  Navicat-Premium-Lite  |       ✓       |                             ✓                             |
@@ -174,4 +176,4 @@ Due to the complexity of Win to permission management, for some common applicati
 ```powershell
 scoop install winget
 winget install Rakuten.Viber
-```
+```

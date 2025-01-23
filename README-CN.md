@@ -122,26 +122,28 @@ scoop config aria2-min-split-size 4M
 
 ## :star: 总结
 
+### AI
+
 ### 科研工具
 
-|        App         | 自动更新 |                               原创                               |
-| :----------------: | :------: | :--------------------------------------------------------------: |
-|        Buzz        |    ✓     | 复制于 [anderlli0053](https://github.com/anderlli0053/DEV-tools) |
-| Jupyterlab-Desktop |    ✓     |       修改自 [gdm257](https://github.com/gdm257/scoop-257)       |
-|      KingDraw      |    ✓     |                                ✓                                 |
-|  Mendeley-Desktop  |    ✓     |                                ✓                                 |
-|      NetLogo       |    ✓     |                                ✓                                 |
-|  OpenBB-Terminal   |    ✓     |                                ✓                                 |
-|     SciHubEVA      |    ✓     |                                ✓                                 |
-|      TeXLive       |    ✓     |     修改自 [chawyehsu](https://github.com/chawyehsu/dorado)      |
+|        App         | 自动更新 |                          原创                           |
+| :----------------: | :------: | :-----------------------------------------------------: |
+| Jupyterlab-Desktop |    ✓     |  修改自 [gdm257](https://github.com/gdm257/scoop-257)   |
+|      KingDraw      |    ✓     |                            ✓                            |
+|  Mendeley-Desktop  |    ✓     |                            ✓                            |
+|      NetLogo       |    ✓     |                            ✓                            |
+|  OpenBB-Terminal   |    ✓     |                            ✓                            |
+|     SciHubEVA      |    ✓     |                            ✓                            |
+|      TeXLive       |    ✓     | 修改自 [chawyehsu](https://github.com/chawyehsu/dorado) |
 
 ### 日常工作
 
 |          App           | 自动更新 |                          原创                           |
 | :--------------------: | :------: | :-----------------------------------------------------: |
 |      Alist-Helper      |    ✓     |                            ✓                            |
-|      AutoDarkMode      |    ✓     |                            ✓                            |
+|          Buzz          |    ✓     |                            ✓                            |
 |        ChatBox         |    ✓     |                            ✓                            |
+|     Cherry-Studio      |    ✓     |                            ✓                            |
 |      Doxygen-GUI       |    ✓     |                            ✓                            |
 |  Navicat-Premium-Lite  |    ✓     |                            ✓                            |
 |     FileCentipede      |    ✓     |                    ✓ (by @CronusLM)                     |
@@ -239,4 +241,4 @@ scoop config aria2-min-split-size 4M
 ```powershell
 scoop install winget
 winget install Tencent.QQ
-```
+```
