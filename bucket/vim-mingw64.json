@@ -1,5 +1,5 @@
 {
-    "version": "9.1.1076",
+    "version": "9.1.1077",
     "description": "A highly configurable text editor for efficiently creating and changing any kind of text.",
     "homepage": "https://www.vim.org",
     "license": "Vim",
@@ -9,8 +9,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/lsq/vim-mingw64-installer/releases/download/9.1.1076/gvim_9.1.1076_x86_64.zip",
-            "hash": "149fd8e576067bbca7a9b3c4ef46d6d0f4cf9f01bb11edbec7fe309be1322629"
+            "url": "https://github.com/lsq/vim-mingw64-installer/releases/download/9.1.1077/gvim_9.1.1077_x86_64.zip",
+            "hash": "e41cf66194fb29bb386bd5a84b2a6ddbde3d5c61da96d921f87d62818c99a199"
         }
     },
     "extract_dir": "vim\\vim91",
