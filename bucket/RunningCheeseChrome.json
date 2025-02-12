@@ -1,5 +1,5 @@
 {
-    "version": "131.0",
+    "version": "133.0",
     "description": "Fast, secure, and free web browser, built for the modern web.",
     "homepage": "https://www.google.com/chrome/",
     "license": {
@@ -8,8 +8,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://i-581.wwentua.com:446/11221000208356075bb/2024/11/14/1a6ea2d5de40b774f26d6571b9674c0d.7z?st=vmiiM6ahkdafI-TB-wIVow&e=1732242978&b=VFQKf1U7UzhXa1NrCzwCRVJvDDVTN1QhUmRfEVQ7AnJVaAlkUDUHLFU3Bys_c&fi=208356075&pid=54-164-107-145&up=2&mp=0&co=0#/RunningCheeseChrome.7z",
-            "hash": "564b2a469e89fbc3fc9cda4a892ed0e638ca2ce5ffb0c2faa2ba2c44dd83cd10"
+            "url": "https://i-380.wwentua.com:446/02120900222634773bb/2025/02/11/36788b5483a9dacac110cd289d22ce21.7z?st=MJ45-9PTtQa3FadrA6HRhw&e=1739327318&b=AwMPelI8Vj1WaldvV2AHQFJvW2IMaFciBjALRVU6A3NWa1s2B2ICKVc1BSk_c&fi=222634773&pid=54-161-58-95&up=2&mp=0&co=0#/RunningCheeseChrome.7z",
+            "hash": "0bc36ccbfbe5bcc4c9c054e7bf87b2615c1a6bd7c0d0826f7581d242d61f4234"
         }
     },
     "bin": [
