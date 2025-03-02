@@ -1,0 +1,40 @@
+{
+    "homepage": "https://rime.im/",
+    "license": "GPL-3.0-or-later",
+    "version": "0.16.3.31",
+    "url": "https://github.com/rime/weasel/releases/download/latest/weasel-0.16.3.31.41dc044-installer.exe#/dl.7z",
+    "hash": "343c42cf097d500ae2e0519f8325739a7c3cc0c963dd26036ae6d0d50585b9d4",
+    "installer": {
+        "script": [
+            "& \"$dir\\WeaselSetup.exe\" /i",
+            "& \"$dir\\WeaselDeployer.exe\" /install",
+            "& \"$dir\\WeaselServer.exe\"",
+            "#Start-Process -Wait \"$dir\\$fname\" -ArgumentList '-d', \"`\"$dir`\"\",  '-with-preview' -ErrorAction SilentlyContinue",
+            "#Remove-Item \"$dir\\$fname\"  -ErrorAction SilentlyContinue"
+        ]
+    },
+    "post_install": [
+        "$servername = 'WeaselServer'",
+        "$value = \"$dir\\WeaselServer.exe\"",
+        "New-ItemProperty -Path \"HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" -Name $servername -PropertyType String -Value $value -ErrorAction SilentlyContinue",
+        "#Remove-ItemProperty -Path \"HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\"  -Name $servername"
+    ],
+    "uninstaller": {
+        "script": [
+            "#Invoke-ExternalCommand \"$dir/uninstall.exe\" -ArgumentList '/S' -RunAs | Out-Null",
+            "$servername = 'WeaselServer'",
+            "$value = \"$dir\\WeaselServer.exe\"",
+            "Start-Process -Wait \"$value\" -ArgumentList '/q'",
+            "#New-ItemProperty -Path \"HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" -Name $servername -PropertyType String -Value $value -ErrorAction Stop",
+            "Remove-ItemProperty -Path \"HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\"  -Name $servername",
+            "#if ($cmd -eq 'uninstall') { reg import \"$dir\\uninstall-context.reg\" }"
+        ]
+    },
+    "checkver": {
+        "url": "https://github.com/rime/weasel/releases/expanded_assets/latest",
+        "regex": "/rime/weasel/releases/download/latest/weasel-(?<version>[\\d.]+)(?<commitid>\\..*)-installer.exe\""
+    },
+    "autoupdate": {
+        "url": "https://github.com/rime/weasel/releases/download/latest/weasel-$version$matchCommitid-installer.exe#/dl.7z"
+    }
+}
