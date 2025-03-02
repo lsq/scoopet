@@ -16,6 +16,7 @@
             "hash": "f2c0161d2b6ef4d1e98d3008cf02a87e541613236eff0ad1b8e9fde1db0fc229"
         }
     },
+    "extract_dir": "mpv_config-2025.03.02",
     "pre_install": "Remove-Item \"$dir\\updater.bat\"",
     "post_install": [
         "$oldVersion = \"$version\" -replace '\\.',''",
@@ -63,6 +64,7 @@
             "64bit": {
                 "url": "https://github.com/dyphire/mpv-config/releases/download/mpv_config-$version/mpv_config-$version.7z"
             }
-        }
+        },
+        "extract_dir": "mpv_config-$version"
     }
 }
