@@ -20,8 +20,9 @@
     "pre_install": "Remove-Item \"$dir\\updater.bat\"",
     "post_install": [
         "$oldVersion = \"$version\" -replace '\\.',''",
-        "$webContent = (iwr https://github.com/dyphire/mpv-winbuild).content",
-        "$webContent -match 'MPV_OWN (?<version>[\\d-]+)'",
+        "$webContent = (irm https://api.github.com/repos/dyphire/mpv-winbuild/releases/latest).tag_name",
+        "#$webContent = (iwr https://github.com/dyphire/mpv-winbuild).content",
+        "$webContent -match 'mpv_own-(?<version>[\\d-]+)'",
         "#$tags = (irm https://api.github.com/repos/dyphire/mpv-winbuild/tags)",
         "#$tags.Item(0).name -match 'mpv_own-(?<version>[\\d-]+)'",
         "$v = $Matches['version'] -replace '-',''",
