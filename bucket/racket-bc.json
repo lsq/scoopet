@@ -1,16 +1,16 @@
 {
-    "version": "8.15",
+    "version": "8.16",
     "description": "A general-purpose, feature-rich programming language developed from Scheme Lisp, also the family of the core language and its dialects. It includes an extensive macro system for creating and implementing language constructs and dialects; eventspaces and custodians for resource management; units, modules and classes for programming in the large; paritial continuation; the first contract system for higher-order functions, and more.",
     "homepage": "https://racket-lang.org",
     "license": "LGPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://users.cs.utah.edu/plt/installers/8.15/racket-8.15-x86_64-win32-bc.exe#/dl.7z",
-            "hash": "52cab75ce59c75ea4387444283eb43b8f70802785ed10ad445fba0773ae2e947"
+            "url": "https://users.cs.utah.edu/plt/installers/8.16/racket-8.16-x86_64-win32-bc.exe#/dl.7z",
+            "hash": "3d2afc6cf25fc213f2160d0df299fbe928d80243e588a437586722eb624c7f0e"
         },
         "32bit": {
-            "url": "https://users.cs.utah.edu/plt/installers/8.15/racket-8.15-i386-win32-bc.exe#/dl.7z",
-            "hash": "c57f32822a5e308962101cfdee0a2ccff49150cb625a968c64d1530e5f124719"
+            "url": "https://users.cs.utah.edu/plt/installers/8.16/racket-8.16-i386-win32-bc.exe#/dl.7z",
+            "hash": "6c479ab7500483ba0ef6512ed44da4496413d4846212fbca7271eae8807554f2"
         }
     },
     "post_install": [
@@ -18,11 +18,20 @@
         "new-item \"$dir\\include\\bc_suffix.h\" -force",
         "cp \"$dir\\lib\\libracket*.dll\" \"$env:windir\\System32\\\" -force "
     ],
-    "pre_uninstall": ["rm -force \"$env:windir\\System32\\libracket*.dll\""],
-    "bin": ["racket.exe", "raco.exe"],
+    "pre_uninstall": "rm -force \"$env:windir\\System32\\libracket*.dll\"",
+    "bin": [
+        "racket.exe",
+        "raco.exe"
+    ],
     "shortcuts": [
-        ["GRacket.exe", "GRacket"],
-        ["DrRacket.exe", "DrRacket"]
+        [
+            "GRacket.exe",
+            "GRacket"
+        ],
+        [
+            "DrRacket.exe",
+            "DrRacket"
+        ]
     ],
     "checkver": {
         "url": "https://download.racket-lang.org/",
@@ -39,7 +48,7 @@
         },
         "hash": {
             "url": "https://download.racket-lang.org/releases/$version/",
-            "regex": "$basename[\\s\\S]*?\"checksum\">$sha1</span>"
-        }
-    }
-}
+            "regex": "$basename[\\s\\S]*?\"checksum\">$sha1</span>"
+        }
+    }
+}
