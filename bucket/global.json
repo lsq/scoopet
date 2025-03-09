@@ -12,6 +12,7 @@
         "bin\\htags.exe",
         "bin\\gozilla.exe"
     ],
+    "persist": "share",
     "checkver": {
         "github": "https://github.com/lsq/global"
     },
