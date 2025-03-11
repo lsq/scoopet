@@ -14,6 +14,7 @@
             "extract_dir": "x86"
         }
     },
+    "innosetup": true,
     "pre_install": "if (!(Test-Path \"$persist_dir\\TaskExplorer.ini\")) { Set-Content -Encoding ASCII -Path \"$dir\\TaskExplorer.ini\" -Value $null }",
     "post_install": "Move-Item -Force \"$persist_dir\\TaskExplorerv-*.exe\" \"$persist_dir\\TaskExplorerv.exe\"",
     "uninstaller": {
