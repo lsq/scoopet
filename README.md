@@ -157,6 +157,7 @@ scoop config aria2-min-split-size 4M
 |      语雀       |                    [yuque](https://yuque.com)                    |    ✓     | 复制于 [dorado](https://github.com/chawyehsu/dorado) |
 |    AIGCPanel    |                [aigcpanel](https://aigcpanel.com)                |    ✓     |                                                      |
 |   BaiduPCS-Go   |      [baidupcs-go](https://github.com/qjfoidnh/BaiduPCS-Go)      |    ✓     |                                                      |
+|     eSearch     |        [esearch](https://github.com/xushengfeng/eSearch)         |    ✓     |                                                      |
 |  Fishing-Funds  |     [fishing-funds](https://github.com/1zilc/fishing-funds)      |    ✓     |                                                      |
 |    HBuilderX    |          [hbuilderx](https://dcloud.io/hbuilderx.html)           |    ✓     |                                                      |
 | M3u8-Downloader | [m3u8-downloader](https://github.com/HeiSir2014/M3U8-Downloader) |    ✓     |                                                      |
