@@ -1,16 +1,16 @@
 {
-    "version": "18.4.0",
+    "version": "18.5.0",
     "description": "LSP language server for LanguageTool",
     "homepage": "https://github.com/ltex-plus/ltex-ls-plus",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ltex-plus/ltex-ls-plus/releases/download/18.4.0/ltex-ls-plus-18.4.0-windows-x64.zip",
-            "hash": "6e4228dfa06d4855ae53cf41ab32f64cae6dcbd307e0b08b6892d10b117efba5"
+            "url": "https://github.com/ltex-plus/ltex-ls-plus/releases/download/18.5.0/ltex-ls-plus-18.5.0-windows-x64.zip",
+            "hash": "de8e4a7c16a289f4a52342b24e33f7c178b9826e4794bb9fc2875a1936dc7749"
         },
         "arm64": {
-            "url": "https://github.com/ltex-plus/ltex-ls-plus/releases/download/18.4.0/ltex-ls-plus-18.4.0-windows-aarch64.zip",
-            "hash": "a5ac34d2d4bde14574096082200a9fb93d46d25d25fde394416e3b9b0996b1e9"
+            "url": "https://github.com/ltex-plus/ltex-ls-plus/releases/download/18.5.0/ltex-ls-plus-18.5.0-windows-aarch64.zip",
+            "hash": "8ab7a1960c9896d755fd99d12ed381b716cfa2225911f26d71da11a166dd7e0f"
         }
     },
     "bin": [
