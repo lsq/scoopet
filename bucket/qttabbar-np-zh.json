@@ -2,7 +2,7 @@
     "version": "1.5.6.-beta.1",
     "description": "Fork of QTTabBar that focuses on localization and other improvements.",
     "homepage": "https://github.com/indiff/qttabbar",
-    "license": "Freeware | GPL-3.0-or-later",
+    "license": "GPL-3.0-or-later",
     "url": "https://github.com/indiff/qttabbar/releases/download/v1.5.6.-beta.1/QTTabBar.Setup_v1.5.6-beta.1_zh.2024.zip",
     "hash": "a9a4f3ae4572336358fcdc3d95fcf4426e08a5fccb5df085638354d2136fcfee",
     "installer": {
