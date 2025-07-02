@@ -16,6 +16,12 @@
         "regex": "<a href=\"https://ctpublic.ieway.cn/public/download/EVCapture_\\?v(\\d[\\.\\d+]+).exe\""
     },
     "autoupdate": {
-        "url": "https://ctpublic.ieway.cn/public/download/EVCapture_v$version.exe"
+        "url": "https://ctpublic.ieway.cn/public/download/EVCapture_v$version.exe",
+        "shortcuts": [
+            [
+                "EVCapture_v$version.exe",
+                "EVCapture"
+            ]
+        ]
     }
 }

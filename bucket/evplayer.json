@@ -6,7 +6,7 @@
     "url": "https://ctpublic.ieway.cn/public/download/EVPlayer_v3.5.7.exe",
     "shortcuts": [
         [
-            "EVPlayer.exe",
+            "EVPlayer_v3.5.7.exe",
             "EVPlayer"
         ]
     ],
@@ -15,6 +15,12 @@
         "regex": "<a href=\"https://ctpublic.ieway.cn/public/download/EVPlayer_\\?v(\\d[\\.\\d+]+).exe\""
     },
     "autoupdate": {
-        "url": "https://ctpublic.ieway.cn/public/download/EVPlayer_v$version.exe"
+        "url": "https://ctpublic.ieway.cn/public/download/EVPlayer_v$version.exe",
+        "shortcuts": [
+            [
+                "EVPlayer_v$version.exe",
+                "EVPlayer"
+            ]
+        ]
     }
 }
