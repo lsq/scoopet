@@ -15,16 +15,5 @@
             "JianyingPro.exe",
             "剪映专业版"
         ]
-    ],
-    "checkver": {
-        "url": "https://lf3-beecdn.bytetos.com/obj/ies-fe-bee/bee_prod/biz_80/bee_prod_80_bee_publish_3563.json",
-        "regex": "default.*?https://(?<path>.*?)/Jianying_split_(?<major>[\\d]+)_(?<minor>[\\d]+)_(?<patch>[\\d]+)_(?<build>[\\d]+)_jianyingpro_0.exe",
-        "replace": "${major}.${minor}.${patch}.${build}"
-    },
-    "autoupdate": {
-        "autoupdate": {
-            "url": "https://$matchPath/Jianying_split_$underscoreVersion_jianyingpro_0.exe#/jianyingpro.7z",
-            "extract_dir": "JYPacket/$version"
-        }
-    }
+    ]
 }
