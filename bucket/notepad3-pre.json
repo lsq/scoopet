@@ -37,7 +37,7 @@
         "$filePath = $_.fileName",
         "Write-Host \"$baseUrl/$filePath\"",
         " $fileNm = ([System.IO.FileInfo]$filePath).Name ",
-        " Invoke-WebRequest \"$baseUrl/$filePath\" -OutFile \"$dir\\$fileNm\"",
+        " Invoke-WebRequest -MaximumRetryCount 3 -RetryIntervalSec 5 -Uri \"$baseUrl/$filePath\" -OutFile \"$dir\\$fileNm\"",
         "}",
         "}",
         "}",
