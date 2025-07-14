@@ -202,7 +202,6 @@ scoop config aria2-min-split-size 4M
 |      Qt-Creator-cn      |    ✓     |
 |      TeXStudio-cn       |    ✓     |
 |         VLC-cn          |    ✓     |
-|       VSCodium-cn       |    ✓     |
 
 ## 备注
 
