@@ -184,7 +184,6 @@ scoop config aria2-min-split-size 4M
 |           App           | 自动更新 |
 | :---------------------: | :------: |
 |       Blender-cn        |    ✓     |
-|       FreeCAD-cn        |    ✓     |
 |         Git-cn          |    ✓     |
 |         GIMP-cn         |    ✓     |
 |       GIMP@dev-cn       |    ✓     |
@@ -193,8 +192,6 @@ scoop config aria2-min-split-size 4M
 |        KiCAD-cn         |    ✓     |
 |     LibreOffice-cn      |    ✓     |
 |         LyX-cn          |    ✓     |
-|      Micromamba-cn      |    ✓     |
-|      Miniconda-cn       |    ✓     |
 |      Miniforge-cn       |    ✓     |
 | Navicat-Premium-Lite-cn |    ✓     |
 |      OBS-Studio-cn      |    ✓     |
