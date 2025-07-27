@@ -18,11 +18,11 @@
         ]
     ],
     "checkver": {
-        "url": "https://mirrors.bfsu.edu.cn/github-release/FreeCAD/FreeCAD/LatestRelease",
+        "url": "https://mirrors.nju.edu.cn/github-release/FreeCAD/FreeCAD/LatestRelease",
         "regex": "FreeCAD_([\\d.]+)-conda-Windows-x86_64-(?<suffix>[\\w.-]+)\\.7z"
     },
     "autoupdate": {
-        "url": "https://mirrors.bfsu.edu.cn/github-release/FreeCAD/FreeCAD/LatestRelease/FreeCAD_$version-conda-Windows-x86_64-$matchSuffix.7z",
+        "url": "https://mirrors.nju.edu.cn/github-release/FreeCAD/FreeCAD/LatestRelease/FreeCAD_$version-conda-Windows-x86_64-$matchSuffix.7z",
         "hash": {
             "url": "$url-SHA256.txt",
             "regex": "(?sm)$basename.*?$sha256"
