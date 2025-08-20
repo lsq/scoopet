@@ -151,7 +151,6 @@ scoop config aria2-min-split-size 4M
 |       TIM       |                                 [tim](https://tim.qq.com)                                 |    ✓     |                                                      |
 |     uTools      |                                 [utools](https://u.tools)                                 |    ✓     |                                                      |
 |     小狼毫      |                                 [weasel](https://rime.im)                                 |    ✓     |                                                      |
-|    企业微信     |                         [wechatwork](https://work.weixin.qq.com)                          |    ✓     |                                                      |
 |    WPSOffice    |                          [wpsoffice-cn](https://wps.com/zh-hant)                          |    ✓     |                                                      |
 |      语雀       |                                [yuque](https://yuque.com)                                 |    ✓     | 复制于 [dorado](https://github.com/chawyehsu/dorado) |
 |    AIGCPanel    |                            [aigcpanel](https://aigcpanel.com)                             |    ✓     |                                                      |
