@@ -51,7 +51,7 @@
             "Write-Host $verHead",
             "$js = (Invoke-WebRequest 'https://files2.sumatrapdfreader.org/software/sumatrapdf/sumatralatest.js')",
             "$jsContent = $js.content",
-            "$verMatch = [regex]::Match($jsContent, 'sumLatestVer=(\\d+);')",
+            "$verMatch = [regex]::Match($jsContent, 'sumLatestVer\\s*=\\s*(\\d+);')",
             "if ($vermatch.success) {",
             "$verTail = $verMatch.groups[1].Value",
             "Write-Host $verTail",
