@@ -29,7 +29,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/lsq/DirectKeycast/releases/download/latest/directkeycast-$version.exe"
+                "url": "https://github.com/lsq/DirectKeycast/releases/download/latest/directkeycast-r$version.exe"
             }
         }
     }
