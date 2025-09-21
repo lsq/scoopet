@@ -21,7 +21,8 @@
     ],
     "persist": [
         "Config",
-        "Storage"
+        "Storage",
+        "Media"
     ],
     "checkver": {
         "github": "https://github.com/yaobiao131/downkyicore"
