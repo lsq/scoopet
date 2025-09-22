@@ -5,7 +5,7 @@
     "license": "GPL-2.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://mirrors.ustc.edu.cn/github-release/obsproject/obs-studio/LatestRelease/OBS-Studio-31.0.4-Windows.zip",
+            "url": "https://mirror.nju.edu.cn/github-release/obsproject/obs-studio/LatestRelease/OBS-Studio-31.0.4-Windows.zip",
             "hash": "4b0c4e2490de69a52bc0202f3585f97019501853422cdbc02fa70ad87b6ff4d2",
             "shortcuts": [
                 [
@@ -27,14 +27,20 @@
         "Remove-Item \"$dir\\obs-plugins.original\" -Recurse -Force"
     ],
     "checkver": {
-        "url": "https://obsproject.com/download",
-        "regex": "OBS-Studio-([\\d.]+)-Windows\\.zip"
+        "github": "https://github.com/obsproject/obs-studio"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://mirrors.ustc.edu.cn/github-release/obsproject/obs-studio/LatestRelease/OBS-Studio-$version-Windows.zip"
+                "url": "https://cdn-fastly.obsproject.com/downloads/OBS-Studio-$version-Windows-x64.zip"
+            },
+            "arm64": {
+                "url": "https://cdn-fastly.obsproject.com/downloads/OBS-Studio-$version-Windows-arm64.zip"
             }
+        },
+        "hash": {
+            "url": "https://github.com/obsproject/obs-studio/releases/$version",
+            "regex": "(?sm)$basename.*?$sha256"
         }
     }
 }
