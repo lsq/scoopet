@@ -1,0 +1,29 @@
+diff --git a/lib/install.ps1 b/lib/install.ps1
+index 54b0922e..7304a132 100644
+--- a/lib/install.ps1
++++ b/lib/install.ps1
+@@ -243,6 +243,24 @@ function Invoke-CachedAria2Download ($app, $version, $manifest, $architecture, $
+             'source'    = cache_path $app $version $url
+         }
+ 
++        # check cache file
++        #Write-Host "$cachedir"
++        #Write-Host "$app"
++        Get-ChildItem -Path $cachedir -file | ForEach-Object { 
++            $ffname = $_.Name
++            $fullName = $_.FullName
++            $ffmatch = [regex]::Matches($ffname, "$app")
++            if (($ffmatch.Success) -and -not($ffname -eq $data.$url.source)){
++                $manifest_hash = hash_for_url $manifest $url $architecture
++                $ok, $err = check_hash $fullName $manifest_hash $(show_app $app $bucket) 
++                if ($ok) {    
++                    Write-Host $_
++                    #$null = $Host.UI.RawUI.ReadKey("NoEcho, IncludeKeyDown")
++                    Rename-Item -Force $fullName $data.$url.source
++                }
++            }
++        }
++
+         if ((Test-Path $data.$url.source) -and -not((Test-Path "$($data.$url.source).aria2") -or (Test-Path $urlstxt)) -and $use_cache) {
+             Write-Host 'Loading ' -NoNewline
+             Write-Host $(url_remote_filename $url) -f Cyan -NoNewline

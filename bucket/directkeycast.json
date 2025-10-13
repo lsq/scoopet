@@ -1,0 +1,36 @@
+{
+    "version": "1_190e511",
+    "description": "A free and open-source tool to visualize your keystrokes in real-time.",
+    "homepage": "https://github.com/lsq/DirectKeycast",
+    "license": "BSD-3-Clause",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/lsq/DirectKeycast/releases/download/latest/directkeycast-r1_190e511.exe",
+            "hash": "74467918ae2dd2c63df68d86cb7d7f2af5376ed0dd589d8e5f4a09dbc9314603"
+        }
+    },
+    "pre_install": "if (Test-Path \"$dir\\directkeycast-*.exe\") { Rename-Item \"$dir\\directkeycast-*.exe\" 'directkeycast.exe' }",
+    "shortcuts": [
+        [
+            "directkeycast.exe",
+            "directkeycast"
+        ]
+    ],
+    "checkver": {
+        "script": [
+            "$jsonObj = (iwr https://api.github.com/repos/lsq/DirectKeycast/releases/latest).Content | ConvertFrom-Json",
+            "$assets = $jsonObj.assets | Sort-Object -Property updated_at -Descending -top 1",
+            "if ($assets.browser_download_url) {",
+            "$assets.browser_download_url",
+            "}"
+        ],
+        "regex": "directkeycast-r(?<version>[\\w_]+).exe"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/lsq/DirectKeycast/releases/download/latest/directkeycast-r$version.exe"
+            }
+        }
+    }
+}

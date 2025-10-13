@@ -1,0 +1,88 @@
+{
+    "version": "8.9.0",
+    "description": "Powerful and easy to use e-book manager",
+    "homepage": "https://calibre-ebook.com",
+    "license": "GPL-3.0-only",
+    "notes": "Calibre drops support for 32-bit CPUs after v6.0.0, if you are running a 32-bit system, please install calibre-normal5 from Versions bucket.",
+    "architecture": {
+        "64bit": {
+            "url": "https://download.calibre-ebook.com/8.9.0/calibre-64bit-8.9.0.msi#/dl.m7z",
+            "hash": "sha512:8ac465ec4568834f5a2f23ce828c1e3615944001df4c7e513380cfe34a8738eb3d43126802d3746e9e751b6b90fa3d29e646a25de103f8286a60bbdf0f1f16ef"
+        }
+    },
+    "shortcuts": [
+        [
+            "calibre.exe",
+            "Calibre"
+        ],
+        [
+            "ebook-edit.exe",
+            "Calibre E-Book Editor"
+        ],
+        [
+            "ebook-viewer.exe",
+            "Calibre E-Book Viewer"
+        ],
+        [
+            "lrfviewer.exe",
+            "Calibre LRF Viewer"
+        ]
+    ],
+    "installer": {
+        "script": [
+            "#https://superuser.com/questions/1522182/how-to-install-msi-to-custom-directory-using-msiexec",
+            "#https://stackoverflow.com/questions/458857/how-to-make-better-use-of-msi-files/1055861#1055861",
+            "#https://stackoverflow.com/questions/2366480/detect-msi-parameters-for-unattended-install",
+            "Write-Host --- $(script:url $manifest $architecture)",
+            "$aurls = $(script:url $manifest $architecture)",
+            "#$null = $Host.UI.RawUI.ReadKey(\"NoEcho, IncludeKeyDown\")",
+            "$cacheFile = $(cache_path $app $version $aurls)",
+            "$newExten = \"$([System.IO.Path]::GetFileNameWithoutExtension($cacheFile)).msi\"",
+            "Write-Host $cacheFile --- $(fname $cacheFile) --- $newExten",
+            "#[System.Console]::ReadKey(1)",
+            "$newFileName = \"$((Get-Item \"$dir\\$fname\").BaseName).msi\"",
+            "Rename-Item -Path  \"$dir\\$fname\" -NewName $newFileName",
+            "Start-Process \"$dir\\$newFileName\"  -ArgumentList @(\"APPLICATIONFOLDER=$dir\") -Wait | Out-Null",
+            "#Move-Item \"$env:TEMP\\Calibre Portable\\**\" \"$dir\"",
+            "#Remove-Item \"$env:TEMP\\Calibre Portable\"",
+            "Remove-Item \"$dir\\$newFileName\"",
+            "Rename-Item -Path \"$cacheFile\" -NewName \"$newExten\"",
+            "Write-Host 'Install complete.'"
+        ]
+    },
+    "bin": [
+        "calibre.exe",
+        "calibre-complete.exe",
+        "calibre-customize.exe",
+        "calibredb.exe",
+        "calibre-debug.exe",
+        "calibre-parallel.exe",
+        "calibre-server.exe",
+        "calibre-smtp.exe",
+        "ebook-convert.exe",
+        "ebook-device.exe",
+        "ebook-edit.exe",
+        "ebook-meta.exe",
+        "ebook-polish.exe",
+        "ebook-viewer.exe",
+        "fetch-ebook-metadata.exe",
+        "lrf2lrs.exe",
+        "lrs2lrf.exe",
+        "lrfviewer.exe",
+        "markdown-calibre.exe",
+        "web2disk.exe"
+    ],
+    "checkver": {
+        "github": "https://github.com/kovidgoyal/calibre"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://download.calibre-ebook.com/$version/calibre-64bit-$version.msi#/dl.m7z",
+                "hash": {
+                    "url": "https://calibre-ebook.com/signatures/calibre-64bit-$version.msi.sha512"
+                }
+            }
+        }
+    }
+}

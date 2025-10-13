@@ -1,0 +1,88 @@
+{
+    "version": "2025.08.25",
+    "description": "Video player based on MPlayer/mplayer2 (builds by shinchiro)",
+    "homepage": "https://mpv.io",
+    "license": "LGPL-2.1-or-later,GPL-2.0-or-later",
+    "notes": [
+        "To set and unset file type associations and AutoPlay handlers, run '$dir\\installer\\mpv-install.bat' and '$dir\\installer\\mpv-uninstall.bat' as administrator, respectively.",
+        "You can use Icaros ('nonportable/icaros-np') to enable thumbnails for all media types."
+    ],
+    "suggest": {
+        "yt-dlp": "yt-dlp"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/dyphire/mpv-config/releases/download/mpv_config-2025.08.25/mpv_config-2025.08.25.7z",
+            "hash": "3c796ecb56ae9442d215cebd5461bf20f5a2c0a7cce119710ddf3967c69d6292"
+        }
+    },
+    "extract_dir": "mpv_config-2025.08.25",
+    "pre_install": "Remove-Item \"$dir\\updater.bat\"",
+    "post_install": [
+        "$oldVersion = \"$version\" -replace '\\.',''",
+        "$webContent = (irm https://api.github.com/repos/dyphire/mpv-winbuild/releases/latest).tag_name",
+        "#$webContent = (iwr https://github.com/dyphire/mpv-winbuild).content",
+        "$webContent -match 'mpv_own-(?<version>[\\d-]+)'",
+        "#$tags = (irm https://api.github.com/repos/dyphire/mpv-winbuild/tags)",
+        "#$tags.Item(0).name -match 'mpv_own-(?<version>[\\d-]+)'",
+        "$v = $Matches['version'] -replace '-',''",
+        "$tagName = 'mpv_own-' +  $Matches['version']",
+        "$proxy = \"\"",
+        "try {",
+        "$rpcResponse = Invoke-WebRequest -UseBasicParsing -Uri \"http://localhost:6800/jsonrpc\" `",
+        "-Method \"POST\" `",
+        "-UserAgent \"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:142.0) Gecko/20100101 Firefox/142.0\" `",
+        "-Headers @{",
+        "\"Accept\" = \"application/json, text/plain, */*\"",
+        "} `",
+        "-ContentType \"application/json\" `",
+        "-Body \"{`\"jsonrpc`\":`\"2.0`\",`\"method`\":`\"aria2.getGlobalStat`\",`\"id`\":`\"QXJpYU5nXzE3NTY2NTMyMjFfMC45OTYzODIyNjAxOTkwNzEz`\"}\"",
+        "if ( $rpcResponse.StatusCode -eq 200) {",
+        "  $proxy = \"http://127.0.0.1:7890\"",
+        "}",
+        "} catch {",
+        "  $proxy = \"\"",
+        "}",
+        "if ($v -gt $oldVersion) {",
+        "	Write-Output \"$v > $oldVersion\"",
+        "	$assetUri = \"https://github.com/dyphire/mpv-winbuild/releases/expanded_assets/$($tagName)\"",
+        "	$webCon = (iwr $assetUri).content",
+        "	$Fmpv = [regex]::Match($webCon, \"(?sm)(mpv-x86_64-v3-$($v)-git-[^\\.]+)\\.7z\").groups[1].value",
+        "	#$weCon -match \"(?<fmpg>ffmpeg-x86_64-v3-git-[^\\.]+\\.7z)\"",
+        "	$Fmpg = [regex]::Match($webCon, \"(?<sm>)(ffmpeg-x86_64-v3-git-[^\\.]+)\\.7z\").groups[1].value",
+        "	$downloadUri = \"https://github.com/dyphire/mpv-winbuild/releases/download/$($tagName)\"",
+        "	\"$Fmpv\",\"$Fmpg\" | ForEach-Object {",
+        "       Write-host $downloadUri",
+        "		aria2c.exe --all-proxy=\"$proxy\" \"--user-agent=Scoop/1.0 (+http://scoop.sh/) PowerShell/5.1 (Windows NT 10.0; Win64;x64; Desktop)\" `",
+        "		--allow-overwrite=true --auto-file-renaming=false --retry-wait=4 --split=16 --max-connection-per-server=16 `",
+        "		--min-split-size=4M  --no-conf=true --follow-metalink=true --metalink-preferred-protocol=https  `",
+        "		--continue --summary-interval=0 --auto-save-interval=1 -d \"$cachedir\"  -o \"$($_).7z\" \"$downloadUri/$($_).7z\"",
+        "		Start-Process 7z.exe -ArgumentList \"x\", \"$cachedir/$($_).7z\", \"-o$dir\\$_\" -Wait",
+        "		if (Test-Path \"$dir\\$_\") {",
+        "			cp \"$dir\\$_\\*\" -Destination \"$dir\\\" -Recurse -Force",
+        "			Remove-Item -Path \"$dir\\$_\" -Recurse -Force -ErrorAction SilentlyContinue",
+        "		}",
+        "	}",
+        "}"
+    ],
+    "env_add_path": ".",
+    "shortcuts": [
+        [
+            "mpv.exe",
+            "mpv"
+        ]
+    ],
+    "persist": "portable_config",
+    "checkver": {
+        "url": "https://github.com/dyphire/mpv-config",
+        "regex": "mpv_config-(?<version>[\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/dyphire/mpv-config/releases/download/mpv_config-$version/mpv_config-$version.7z"
+            }
+        },
+        "extract_dir": "mpv_config-$version"
+    }
+}

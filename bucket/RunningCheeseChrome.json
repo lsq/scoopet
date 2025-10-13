@@ -1,0 +1,74 @@
+{
+    "version": "134.0",
+    "description": "Fast, secure, and free web browser, built for the modern web.",
+    "homepage": "https://www.google.com/chrome/",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://www.google.com/chrome/privacy/eula_text.html"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://i-783.wwentua.com:446/03112000226809337bb/2025/03/08/29365d13f874cf110d9630e41345176f.7z?st=Kn3Na_jwkBFUmzQWQ-5UFw&e=1741699702&b=BwcBdAJsWTJUaFVtAjUEQ1RpWmNQNFciBDJaFF0yA3MHOgpnBmNRegNhVHg_c&fi=226809337&pid=3-89-66-67&up=2&mp=0&co=0#/RunningCheeseChrome.7z",
+            "hash": "7eefa4919f363c601cd6f2fcfff25cecf1a15ecc6c4c5165bcf31274ab8255e2"
+        }
+    },
+    "bin": [
+        [
+            "app\\chrome.exe",
+            "chrome",
+            "--portable --disable-features=WinSboxNoFakeGdiInit --user-data-dir=\"$dir\\Data\" --disk-cache-dir=\"$dir\\Cache\" --flag-switches-begin --enable-features=EnableTabMuting,ParallelDownloading,ReadAnything,ReadAnythingWithScreen2x --flag-switches-end"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "app\\chrome.exe",
+            "Google Chrome",
+            "--portable --disable-features=WinSboxNoFakeGdiInit --user-data-dir=\"$dir\\Data\" --disk-cache-dir=\"$dir\\Cache\" --flag-switches-begin --enable-features=EnableTabMuting,ParallelDownloading,ReadAnything,ReadAnythingWithScreen2x --flag-switches-end"
+        ]
+    ],
+    "post_install": [
+        "if (!(Test-Path \"$dir\\User Data\\*\") -and (Test-Path \"$env:LocalAppData\\Google\\Chrome\\User Data\")) {",
+        "    info '[Portable Mode]: Copying user data...'",
+        "    Copy-Item \"$env:LocalAppData\\Google\\Chrome\\User Data\\*\" \"$dir\\User Data\" -Recurse",
+        "}"
+    ],
+    "env_set": {
+        "CHROME_EXECUTABLE": "$dir\\app\\chrome.exe"
+    },
+    "persist": "Data",
+    "checkver": {
+        "script": [
+            "$homeHtml = (Invoke-WebRequest 'https://www.runningcheese.com/chrome').content",
+            "$matchStr = [regex]::Match($homeHtml, '(?sm)主用链接：<a href=\"([^\"]+)\"')",
+            "$versionStr = [regex]::Match($homeHtml, '(?sm)RunningCheese Chrome ([\\d.]+) 稳定版')",
+            "$matchVer = $versionStr.Groups[1].Value",
+            "$apiUrl = 'https://vercel-chi-kohl.vercel.app/lanzouyunapi.php?url='",
+            "if ($matchStr.Success) {",
+            "	$dirUrl= $matchStr.Groups[1].Value",
+            "	$req = $apiUrl + $dirUrl",
+            "	$resJsonObj = Invoke-RestMethod $req",
+            "	if ($resJsonObj.code -eq 0) {",
+            "	  $resJsonObj.data.list | ForEach-Object { ",
+            "		$fn = $_.name",
+            "		$fid = $_.id",
+            "		if ( $fn -eq 'RunningCheeseChrome.7z') {",
+            "		  $newReq = $apiUrl + $fid",
+            "		  $res = Invoke-RestMethod $newReq",
+            "		  if ( $res.code -eq 0) {",
+            "			\"v$($matchVer)#$($res.data.url)\"",
+            "		  }",
+            "		}",
+            "		}",
+            "	}",
+            "}"
+        ],
+        "regex": "v(?<version>[\\d.]+)#https://(?<downlk>\\S+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://$matchDownlk/RunningCheeseChrome.7z"
+            }
+        }
+    }
+}

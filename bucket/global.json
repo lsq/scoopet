@@ -1,0 +1,22 @@
+{
+    "version": "6.6.14",
+    "description": "A source code tagging system that works the same way across diverse environments.",
+    "homepage": "https://www.gnu.org/software/global/",
+    "license": "GPL-3.0-or-later",
+    "url": "https://github.com/lsq/global/releases/download/6.6.14/global-6.6.14_x64.zip",
+    "hash": "6ed875db3cd06e1c7ec3cbc5ad25ba14494eddaef4ec3d9cc9f566da4bbecc84",
+    "bin": [
+        "bin\\global.exe",
+        "bin\\gtags.exe",
+        "bin\\gtags-cscope.exe",
+        "bin\\htags.exe",
+        "bin\\gozilla.exe"
+    ],
+    "persist": "share",
+    "checkver": {
+        "github": "https://github.com/lsq/global"
+    },
+    "autoupdate": {
+        "url": "https://github.com/lsq/global/releases/download/$version/global-$version_x64.zip"
+    }
+}

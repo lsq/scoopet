@@ -1,0 +1,38 @@
+{
+    "version": "4218",
+    "description": "Multi-document editor",
+    "homepage": "https://apps.kde.org/konsole",
+    "license": "LGPL-2.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://cdn.kde.org/ci-builds/utilities/konsole/master/windows/konsole-master-4218-windows-cl-msvc2022-x86_64.7z",
+            "hash": "d61cd35d2f5de335d008aba9b5fe8d49afd2044a68c67e6fb6327b66909a6102"
+        }
+    },
+    "bin": [
+        [
+            "bin\\konsole.exe",
+            "konsole"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "bin\\konsole.exe",
+            "Konsole Nightly"
+        ]
+    ],
+    "checkver": {
+        "url": "https://cdn.kde.org/ci-builds/utilities/konsole/master/windows/",
+        "regex": "konsole-master-(\\d+)-windows-cl-(?<lib>\\w+)-x86_64\\.7z"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://cdn.kde.org/ci-builds/utilities/konsole/master/windows/konsole-master-$version-windows-cl-$matchLib-x86_64.7z"
+            }
+        },
+        "hash": {
+            "url": "$url.sha256"
+        }
+    }
+}
