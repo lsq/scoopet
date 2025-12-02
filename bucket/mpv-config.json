@@ -1,5 +1,5 @@
 {
-    "version": "2025.08.25",
+    "version": "2025.12.02",
     "description": "Video player based on MPlayer/mplayer2 (builds by shinchiro)",
     "homepage": "https://mpv.io",
     "license": "LGPL-2.1-or-later,GPL-2.0-or-later",
@@ -12,11 +12,11 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/dyphire/mpv-config/releases/download/mpv_config-2025.08.25/mpv_config-2025.08.25.7z",
-            "hash": "3c796ecb56ae9442d215cebd5461bf20f5a2c0a7cce119710ddf3967c69d6292"
+            "url": "https://github.com/dyphire/mpv-config/releases/download/mpv_config-2025.12.02/mpv_config-2025.12.02.7z",
+            "hash": "d4de8213cd71075a4343d1ffd7b62e92ce02cdf19d4086b882786a3c6078f98d"
         }
     },
-    "extract_dir": "mpv_config-2025.08.25",
+    "extract_dir": "mpv_config-2025.12.02",
     "pre_install": "Remove-Item \"$dir\\updater.bat\"",
     "post_install": [
         "$oldVersion = \"$version\" -replace '\\.',''",
