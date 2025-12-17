@@ -4,7 +4,7 @@
     "homepage": "https://www.gnu.org/software/global/",
     "license": "GPL-3.0-or-later",
     "url": "https://github.com/lsq/global/releases/download/6.6.14/global-6.6.14_x64.zip",
-    "hash": "6ed875db3cd06e1c7ec3cbc5ad25ba14494eddaef4ec3d9cc9f566da4bbecc84",
+    "hash": "e628586056588d82b8c51da5f3357a68f827b4c945b70b7a6ebe5d43342108b3",
     "bin": [
         "bin\\global.exe",
         "bin\\gtags.exe",
@@ -13,6 +13,13 @@
         "bin\\gozilla.exe"
     ],
     "persist": "share",
+    "post_install": [
+        "if (Get-Command ctags -ErrorAction SilentlyContinue) {",
+        "$ctagscom = (Get-Command ctags).Source -replace '\\\\','/' -replace ':', '\\:'",
+        "$gcf = \"$persist_dir\\share\\gtags\\gtags.conf\"",
+        "(Get-Content $gcf) -replace '(:ctagscom=)(.*?)(:\\\\)', ('$1{0}$3' -f $ctagscom) | Set-Content $gcf -Encoding UTF8 ",
+        "}"
+    ],
     "checkver": {
         "github": "https://github.com/lsq/global"
     },
