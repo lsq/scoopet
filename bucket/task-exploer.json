@@ -5,20 +5,8 @@
     "license": "GPL-3.0-only",
     "url": "https://github.com/DavidXanatos/TaskExplorer/releases/download/v1.7.1/TaskExplorer-v1.7.1.exe",
     "hash": "dd07078434eacbf151f5623c263017a8513eb1cd523ff78f4f1a3c622a902e05",
-    "architecture": {
-        "64bit": {
-            "extract_dir": "x64"
-        },
-        "32bit": {
-            "extract_dir": "x86"
-        }
-    },
     "innosetup": true,
     "pre_install": "if (!(Test-Path \"$persist_dir\\TaskExplorer.ini\")) { Set-Content -Encoding ASCII -Path \"$dir\\TaskExplorer.ini\" -Value $null }",
-    "post_install": "Move-Item -Force \"$persist_dir\\TaskExplorerv-*.exe\" \"$persist_dir\\TaskExplorerv.exe\"",
-    "uninstaller": {
-        "script": "if(Test-Path \"$dir\\TaskExplorer.ini\") { Copy-Item \"$dir\\TaskExplorer.ini\" \"$persist_dir\\TaskExplorer.ini\" | Out-Null }"
-    },
     "persist": "TaskExplorer.ini",
     "shortcuts": [
         [
