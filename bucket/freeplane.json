@@ -1,5 +1,5 @@
 {
-    "version": "touchscreen-1.12.14",
+    "version": "touchscreen-1.12.15",
     "description": "Freeplane is a free and open source software application that supports thinking, sharing information and getting things done at work, in school and at home. The software can be used for mind mapping and analyzing the information contained in mind maps.",
     "homepage": "https://www.freeplane.org",
     "license": "GPL-2.0-or-later",
@@ -9,8 +9,8 @@
             "java/openjdk17"
         ]
     },
-    "url": "https://downloads.sourceforge.net/project/freeplane/freeplane%20stable/Freeplane-Setup-touchscreen-1.12.14.exe",
-    "hash": "sha1:07efad626ddfe5936d059c76a2bde58f65f655f6",
+    "url": "https://downloads.sourceforge.net/project/freeplane/freeplane%20stable/Freeplane-Setup-touchscreen-1.12.15.exe",
+    "hash": "sha1:0ba257007025f4645fe6cd5ed372877d1d04a093",
     "installer": {
         "script": [
             "Start-Process -Wait \"$dir\\$fname\" -ArgumentList '/sp-', '/silent', \"/dir=`\"$dir`\"\"   -ErrorAction     SilentlyContinue",
