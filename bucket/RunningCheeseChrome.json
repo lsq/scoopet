@@ -1,5 +1,5 @@
 {
-    "version": "134.0",
+    "version": "139.0",
     "description": "Fast, secure, and free web browser, built for the modern web.",
     "homepage": "https://www.google.com/chrome/",
     "license": {
@@ -9,21 +9,21 @@
     "architecture": {
         "64bit": {
             "url": "https://i-783.wwentua.com:446/03112000226809337bb/2025/03/08/29365d13f874cf110d9630e41345176f.7z?st=Kn3Na_jwkBFUmzQWQ-5UFw&e=1741699702&b=BwcBdAJsWTJUaFVtAjUEQ1RpWmNQNFciBDJaFF0yA3MHOgpnBmNRegNhVHg_c&fi=226809337&pid=3-89-66-67&up=2&mp=0&co=0#/RunningCheeseChrome.7z",
-            "hash": "7eefa4919f363c601cd6f2fcfff25cecf1a15ecc6c4c5165bcf31274ab8255e2"
+            "hash": "4e1aadf29da1219dca218812b03b829127acc64f6dad7324d1f2a4e37ab0c248"
         }
     },
     "bin": [
         [
             "app\\chrome.exe",
             "chrome",
-            "--portable --disable-features=WinSboxNoFakeGdiInit --user-data-dir=\"$dir\\Data\" --disk-cache-dir=\"$dir\\Cache\" --flag-switches-begin --enable-features=EnableTabMuting,ParallelDownloading,ReadAnything,ReadAnythingWithScreen2x --flag-switches-end"
+            "--disable-features=ExtensionManifestV2Unsupported,ExtensionManifestV2Disable --user-data-dir=\"$dir\\Data\" --disk-cache-dir=\"$dir\\Cache\" --flag-switches-begin --enable-features=EnableTabMuting,ParallelDownloading,ReadAnything,ReadAnythingWithScreen2x --flag-switches-end"
         ]
     ],
     "shortcuts": [
         [
             "app\\chrome.exe",
             "Google Chrome",
-            "--portable --disable-features=WinSboxNoFakeGdiInit --user-data-dir=\"$dir\\Data\" --disk-cache-dir=\"$dir\\Cache\" --flag-switches-begin --enable-features=EnableTabMuting,ParallelDownloading,ReadAnything,ReadAnythingWithScreen2x --flag-switches-end"
+            "--disable-features=ExtensionManifestV2Unsupported,ExtensionManifestV2Disable --user-data-dir=\"$dir\\Data\" --disk-cache-dir=\"$dir\\Cache\" --flag-switches-begin --enable-features=EnableTabMuting,ParallelDownloading,ReadAnything,ReadAnythingWithScreen2x --flag-switches-end"
         ]
     ],
     "post_install": [
