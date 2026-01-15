@@ -1,12 +1,12 @@
 {
-    "version": "3.6.17127",
+    "version": "3.6.17145",
     "description": "PDF and eBook reader",
     "homepage": "https://www.sumatrapdfreader.org/free-pdf-reader",
     "license": "GPL-3.0-only,BSD-2-Clause",
     "architecture": {
         "64bit": {
-            "url": "https://www.sumatrapdfreader.org/dl/prerel/17127/SumatraPDF-prerel-64-install.exe",
-            "hash": "ece6203978a21ea4cfed046426702adca63a381497393028cacc74be187fa920"
+            "url": "https://www.sumatrapdfreader.org/dl/prerel/17145/SumatraPDF-prerel-64-install.exe",
+            "hash": "4686cd8f5b87b0d25db2bb4346cd9a2249eda0c7d1201b0672bd4f6d93c85961"
         }
     },
     "installer": {
