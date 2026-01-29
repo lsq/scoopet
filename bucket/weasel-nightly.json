@@ -1,9 +1,9 @@
 {
     "homepage": "https://rime.im/",
     "license": "GPL-3.0-or-later",
-    "version": "0.17.4.16",
-    "url": "https://github.com/rime/weasel/releases/download/latest/weasel-0.17.4.16.a10c058-installer.exe#/dl.7z",
-    "hash": "347d84480f5bfffbe2c5815f18a12de41cf28415cc7483b6730d6b7ef49a697b",
+    "version": "0.17.4.18",
+    "url": "https://github.com/rime/weasel/releases/download/latest/weasel-0.17.4.18.773113a-installer.exe#/dl.7z",
+    "hash": "cf72b01ff63f4deb7b1c808a4724e40e6bb8a8fa56c5072af141f87dfd0a2447",
     "installer": {
         "script": [
             "& \"$dir\\WeaselSetup.exe\" /i",
