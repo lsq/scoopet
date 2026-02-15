@@ -1,5 +1,5 @@
 {
-    "version": "9.1.2148",
+    "version": "9.2.0000",
     "description": "A highly configurable text editor for efficiently creating and changing any kind of text.",
     "homepage": "https://www.vim.org",
     "license": "Vim",
@@ -9,11 +9,11 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/lsq/vim-mingw64-installer/releases/download/9.1.2148/gvim_9.1.2148_x86_64.zip",
-            "hash": "ea60c82864a28a8af6999014e91cbe46fe04dff28146d094cd945ddd27271ee5"
+            "url": "https://github.com/lsq/vim-mingw64-installer/releases/download/9.2.0000/gvim_9.2.0000_x86_64.zip",
+            "hash": "f9f7ec1a003f2d55674d8543dad2894598f07aabec5366eb446cf67e697c03e9"
         }
     },
-    "extract_dir": "vim\\vim91",
+    "extract_dir": "vim\\vim92",
     "post_install": [
         "Remove-Item \"$dir\\`$*\", \"$dir\\uninstal.*\", \"$dir\\install.exe\" -Recurse",
         "'install-context.reg', 'uninstall-context.reg' | ForEach-Object {",
