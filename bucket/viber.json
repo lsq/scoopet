@@ -1,5 +1,5 @@
 {
-    "version": "27.4.0.0",
+    "version": "27.5.0.0",
     "homepage": "https://www.viber.com/",
     "description": "A freenium service that allows for secure calls and messages to anyone, anywhere.",
     "license": {
@@ -9,7 +9,7 @@
     "architecture": {
         "64bit": {
             "url": "https://download.cdn.viber.com/desktop/windows/ViberSetup.exe",
-            "hash": "53f880873d2f423039fe5f2c8562f9b1c1860fe0e913b8d2663ebbb852643927"
+            "hash": "ae8c905eb2bd887e064125966473fdc24d788520921e518461506c6b75ca1f91"
         }
     },
     "pre_install": [
