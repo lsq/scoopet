@@ -19,7 +19,7 @@
             "music-dl"
         ]
     ],
-    "persist": "data/download",
+    "persist": "data/downloads",
     "checkver": {
         "github": "https://github.com/guohuiyuan/go-music-dl"
     },
