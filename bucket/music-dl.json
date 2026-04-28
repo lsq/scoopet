@@ -9,6 +9,9 @@
             "hash": "ec1d88da914329c3c8396ba0ca27820689ebb18286456818cc85f54827c338e7"
         }
     },
+    "pre_install": [
+       "if (!(Test-Path -Path \"$persist_dir\\data\\download\")) { New-Item -Path \"$dir\\data\\download\" -ItemType directory | Out-Null }"
+    ],
     "bin": "music-dl-desktop-go.exe",
     "shortcuts": [
         [
