@@ -1,33 +1,33 @@
 {
-  "version": "v1.0.16",
-  "description": "一个基于 Go 语言的全网音乐搜索与下载工具，支持 CLI、Web 和桌面应用模式。",
-  "homepage": "https://github.com/guohuiyuan/go-music-dl",
-  "license": "AGPL-3.0",
-  "architecture": {
-    "64bit": {
-      "url": "https://github.com/guohuiyuan/go-music-dl/releases/download/v1.0.16/music-dl-desktop-go_windows_amd64.zip ",
-      "hash": "66380e2e1741d7c47123ca2600b16521ee8bf0e5b67184daa6ddc926d5c40209"
-    }
-  },
-  "bin": "music-dl-desktop-go.exe",
-  "shortcuts": [
+    "version": "1.0.17",
+    "description": "一个基于 Go 语言的全网音乐搜索与下载工具，支持 CLI、Web 和桌面应用模式。",
+    "homepage": "https://github.com/guohuiyuan/go-music-dl",
+    "license": "AGPL-3.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/guohuiyuan/go-music-dl/releases/download/v1.0.17/music-dl-desktop-go_windows_amd64.zip",
+            "hash": "ec1d88da914329c3c8396ba0ca27820689ebb18286456818cc85f54827c338e7"
+        }
+    },
+    "bin": "music-dl-desktop-go.exe",
+    "shortcuts": [
         [
             "music-dl-desktop-go.exe",
             "music-dl"
         ]
-  ],
-  "persist": "data/download",
-  "checkver": {
-    "github": "https://github.com/guohuiyuan/go-music-dl"
-  },
-  "autoupdate": {
-    "architecture": {
-      "64bit": {
-        "url": "https://github.com/guohuiyuan/go-music-dl/releases/download/v$version/music-dl-desktop-go_windows_amd64.zip"
-      }
+    ],
+    "persist": "data/download",
+    "checkver": {
+        "github": "https://github.com/guohuiyuan/go-music-dl"
     },
-    "hash": {
-        "mode": "github"
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/guohuiyuan/go-music-dl/releases/download/v$version/music-dl-desktop-go_windows_amd64.zip"
+            }
+        },
+        "hash": {
+            "mode": "github"
+        }
     }
-  }
 }
