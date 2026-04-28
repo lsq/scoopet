@@ -10,7 +10,7 @@
         }
     },
     "pre_install": [
-       "if (!(Test-Path -Path \"$persist_dir\\data\\download\")) { New-Item -Path \"$dir\\data\\download\" -ItemType directory | Out-Null }"
+       "if (!(Test-Path -Path \"$persist_dir\\data\\downloads\")) { New-Item -Path \"$dir\\data\\downloads\" -ItemType directory | Out-Null }"
     ],
     "bin": "music-dl-desktop-go.exe",
     "shortcuts": [
