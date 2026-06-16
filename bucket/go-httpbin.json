@@ -1,0 +1,33 @@
+{
+    "version": "1.0.30",
+    "description": "A reasonably complete and well-tested golang port of httpbin, with zero dependencies outside the go stdlib.",
+    "homepage": "https://github.com/mccutchen/go-httpbin",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/mccutchen/go-httpbin/releases/download/v1.0.30/music-dl-desktop-go_windows_amd64.zip",
+            "hash": "ea072c17e4abe1b4287b8a8d226085cf874ac8fe69a11f5d1985cb19e62bf820"
+        }
+    },
+    "pre_install": "#if (!(Test-Path -Path \"$persist_dir\\data\\downloads\")) { New-Item -Path \"$dir\\data\\downloads\" -ItemType directory | Out-Null }",
+    "bin": "go-httpbin.exe",
+    "shortcuts": [
+        [
+            "go-httpbin.exe",
+            "go-httpbin"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/mccutchen/go-httpbin"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/mccutchen/go-httpbin/releases/download/v$version/go-httpbin-windows-amd64.zip"
+            }
+        },
+        "hash": {
+            "mode": "github"
+        }
+    }
+}
