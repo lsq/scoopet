@@ -1,12 +1,12 @@
 {
-    "version": "1.0.32",
+    "version": "1.0.33",
     "description": "一个基于 Go 语言的全网音乐搜索与下载工具，支持 CLI、Web 和桌面应用模式。",
     "homepage": "https://github.com/guohuiyuan/go-music-dl",
     "license": "AGPL-3.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/guohuiyuan/go-music-dl/releases/download/v1.0.32/music-dl-desktop-go_windows_amd64.zip",
-            "hash": "475d8406a6592e2fad75ecc2e65f94ed4324f8421e0511b7831984610f9f8bb7"
+            "url": "https://github.com/guohuiyuan/go-music-dl/releases/download/v1.0.33/music-dl-desktop-go_windows_amd64.zip",
+            "hash": "031a4c97f23070ea6668f33b8624edcec1d2595e920614aed81b5046837c1351"
         }
     },
     "pre_install": "if (!(Test-Path -Path \"$persist_dir\\data\\downloads\")) { New-Item -Path \"$dir\\data\\downloads\" -ItemType directory | Out-Null }",
