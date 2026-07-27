@@ -1,12 +1,12 @@
 {
-    "version": "2.24.0",
+    "version": "2.25.0",
     "description": "A reasonably complete and well-tested golang port of httpbin, with zero dependencies outside the go stdlib.",
     "homepage": "https://github.com/mccutchen/go-httpbin",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/mccutchen/go-httpbin/releases/download/v2.24.0/go-httpbin-windows-amd64.zip",
-            "hash": "d8190ad06ec14ca6a54d2ef220fb276c22c09ad1eda270e861f10b403ebe4bb5"
+            "url": "https://github.com/mccutchen/go-httpbin/releases/download/v2.25.0/go-httpbin-windows-amd64.zip",
+            "hash": "45a71bcb51168103b0882e4f4e3331303d42cdbffe76d6115c6a996c4cae484f"
         }
     },
     "pre_install": "#if (!(Test-Path -Path \"$persist_dir\\data\\downloads\")) { New-Item -Path \"$dir\\data\\downloads\" -ItemType directory | Out-Null }",
