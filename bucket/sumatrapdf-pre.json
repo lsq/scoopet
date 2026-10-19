@@ -44,13 +44,13 @@
     ],
     "checkver": {
         "script": [
-            "$response = Invoke-WebRequest 'https://www.sumatrapdfreader.org/free-pdf-reader.html'",
-            "$matches = [regex]::Match($response.Content, '/prerelease\">([\\d.]+)<span')",
+            "$response = Invoke-WebRequest 'https://www.sumatrapdfreader.org/free-pdf-reader'",
+            "$matches = [regex]::Match($response.Content, '/prerelease\">[^<]*?([\\d.]+)<span')",
             "if ($matches.Success) {",
             "$verHead = $matches.groups[1].Value",
             "Write-Host $verHead",
-            "$js = (Invoke-WebRequest 'https://files2.sumatrapdfreader.org/software/sumatrapdf/sumatralatest.js')",
-            "$jsContent = $js.content",
+            "$js = (Invoke-WebRequest -Uri 'https://files.sumatrapdfreader.org/software/sumatrapdf/sumatralatest.js' -TimeoutSec 15 -UseBasicParsing -ErrorAction Stop)",
+            "$jsContent = ($js.Content)",
             "$verMatch = [regex]::Match($jsContent, 'sumLatestVer\\s*=\\s*(\\d+);')",
             "if ($vermatch.success) {",
             "$verTail = $verMatch.groups[1].Value",
