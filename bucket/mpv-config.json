@@ -74,7 +74,7 @@
     ],
     "persist": "portable_config",
     "checkver": {
-        "url": "https://github.com/dyphire/mpv-config",
+        "url": "https://api.github.com/repos/dyphire/mpv-config/releases/latest",
         "regex": "mpv_config-(?<version>[\\d.]+)"
     },
     "autoupdate": {

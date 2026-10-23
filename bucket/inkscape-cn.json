@@ -28,12 +28,18 @@
     ],
     "checkver": {
         "script": [
-            "$redirUrl = [System.Net.HttpWebRequest]::Create('https://inkscape.org/release/').GetResponse().ResponseUri.AbsoluteUri",
-            "$test_dl = Invoke-WebRequest ($redirUrl + 'windows/64-bit/compressed-7z/dl/') -UseBasicParsing",
+            "$req = [System.Net.HttpWebRequest]::Create('https://inkscape.org/release/')",
+            "$req.AllowAutoRedirect = $false",
+            "$resp = $req.GetResponse()",
+            "f ($resp.StatusCode -eq 'Found') {  # 302",
+            "   $location = $resp.Headers['Location']",
+            "   Write-Host \"302 重定向目标: $location\"",
+            "$test_dl = Invoke-WebRequest ('https://inkscape.org' + $location + 'windows/64-bit/compressed-7z/dl/') -UseBasicParsing",
             "$filename = ($test_dl.Links | Where-Object href -match '.7z$' | Select-Object -First 1 -ExpandProperty href) -split '/' | Select-Object -Last 1",
-            "$clean_filename = $filename -replace '-x64.7z'",
+            "$clean_filename = $filename -replace '-x64.*.7z'",
             "$ink_version = $clean_filename -replace 'inkscape-'",
-            "Write-Output $ink_version $clean_filename"
+            "Write-Output $ink_version $clean_filename",
+            "}"
         ],
         "regex": "(?<version>.+)\\s(?<cleanfilename>.+)"
     },
