@@ -31,7 +31,7 @@
             "$req = [System.Net.HttpWebRequest]::Create('https://inkscape.org/release/')",
             "$req.AllowAutoRedirect = $false",
             "$resp = $req.GetResponse()",
-            "f ($resp.StatusCode -eq 'Found') {  # 302",
+            "if ($resp.StatusCode -eq 'Found') {  # 302",
             "   $location = $resp.Headers['Location']",
             "   Write-Host \"302 重定向目标: $location\"",
             "$test_dl = Invoke-WebRequest ('https://inkscape.org' + $location + 'windows/64-bit/compressed-7z/dl/') -UseBasicParsing",
