@@ -1,5 +1,5 @@
 {
-    "version": "139.0",
+    "version": "154.0",
     "description": "Fast, secure, and free web browser, built for the modern web.",
     "homepage": "https://www.google.com/chrome/",
     "license": {
@@ -8,8 +8,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://i-783.wwentua.com:446/03112000226809337bb/2025/03/08/29365d13f874cf110d9630e41345176f.7z?st=Kn3Na_jwkBFUmzQWQ-5UFw&e=1741699702&b=BwcBdAJsWTJUaFVtAjUEQ1RpWmNQNFciBDJaFF0yA3MHOgpnBmNRegNhVHg_c&fi=226809337&pid=3-89-66-67&up=2&mp=0&co=0#/RunningCheeseChrome.7z",
-            "hash": "4e1aadf29da1219dca218812b03b829127acc64f6dad7324d1f2a4e37ab0c248"
+            "url": "https://zip2.webgetstore.com/8390afd4276d021034f149e0cae6bd9a/6adc8759/2026/10/23/506627233d126ad4ca9df4e4187a5401.7z?fn=RunningCheeseChrome.7z",
+            "hash": "661ec026773dba07374cccc66a067f553aa8d9772a8d6885383d148585b786fb"
         }
     },
     "bin": [
@@ -38,27 +38,31 @@
     "persist": "Data",
     "checkver": {
         "script": [
+            "$bucketRoot = Split-Path (Split-Path $file -Parent) -Parent",
+            "$script_lz =  \"$bucketRoot\\scripts\\lanzou_setup.sh\"",
             "$homeHtml = (Invoke-WebRequest 'https://www.runningcheese.com/chrome').content",
             "$matchStr = [regex]::Match($homeHtml, '(?sm)主用链接：<a href=\"([^\"]+)\"')",
             "$versionStr = [regex]::Match($homeHtml, '(?sm)RunningCheese Chrome ([\\d.]+) 稳定版')",
             "$matchVer = $versionStr.Groups[1].Value",
-            "$apiUrl = 'https://vercel-chi-kohl.vercel.app/lanzouyunapi.php?url='",
+            "#$apiUrl = 'https://vercel-chi-kohl.vercel.app/lanzouyunapi.php?url='",
             "if ($matchStr.Success) {",
             "	$dirUrl= $matchStr.Groups[1].Value",
-            "	$req = $apiUrl + $dirUrl",
-            "	$resJsonObj = Invoke-RestMethod $req",
-            "	if ($resJsonObj.code -eq 0) {",
-            "	  $resJsonObj.data.list | ForEach-Object { ",
-            "		$fn = $_.name",
-            "		$fid = $_.id",
+            "   $resJsonObj = bash $script_lz -u $dirUrl | ConvertFrom-Json",
+            "   if ($resJsonObj.code -ne 200) { throw $result.msg }",
+            "	#$req = $apiUrl + $dirUrl",
+            "	#$resJsonObj = Invoke-RestMethod $req",
+            "	if ($resJsonObj.code -eq 200) {",
+            "	    #$resJsonObj.data.list | ForEach-Object { ",
+            "		$fn = $resJsonObj.name",
+            "		#$fid = $resJsonObj.id",
             "		if ( $fn -eq 'RunningCheeseChrome.7z') {",
-            "		  $newReq = $apiUrl + $fid",
-            "		  $res = Invoke-RestMethod $newReq",
-            "		  if ( $res.code -eq 0) {",
-            "			\"v$($matchVer)#$($res.data.url)\"",
-            "		  }",
+            "		  #$newReq = $apiUrl + $fid",
+            "		  #$res = Invoke-RestMethod $newReq",
+            "		  #if ( $res.code -eq 0) {",
+            "			\"v$($matchVer)#$($resJsonObj.downUrl)\"",
+            "		  #}",
             "		}",
-            "		}",
+            "		#}",
             "	}",
             "}"
         ],
@@ -67,7 +71,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://$matchDownlk/RunningCheeseChrome.7z"
+                "url": "https://$matchDownlk"
             }
         }
     }
