@@ -1,15 +1,15 @@
 {
     "version": "157.0",
     "description": "Fast, secure, and free web browser, built for the modern web.",
-    "homepage": "https://www.google.com/chrome/",
+    "homepage": "https://www.runningcheese.com/chrome",
     "license": {
         "identifier": "Freeware",
         "url": "https://www.google.com/chrome/privacy/eula_text.html"
     },
     "architecture": {
         "64bit": {
-            "url": "https://zip3.webgetstore.com/9b64e5d0839057cbf55287967a5dde5b/6af41147/2026/11/11/48484b11596b96981db01fb013d94594.7z?fn=RunningCheeseChrome.7z",
-            "hash": "27e097a25ad807ce3b073abe821b57885876e84fe23f60d9f65a92fad9a5eea9"
+            "url": "https://zip3.webgetstore.com/ea26da502f21f7f841137a736ccf3520/6af9c40b/2026/11/12/cc0fd9ad2dea5fb74b41c2d9ac159d06.7z?fn=RunningCheeseChrome.7z",
+            "hash": "547ef32e796acf26a9642bfaf35b63d3c7ae9314aa7967ad1f73f0c0388fbbb9"
         }
     },
     "bin": [
