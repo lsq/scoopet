@@ -1,12 +1,12 @@
 {
-    "version": "5485",
+    "version": "5504",
     "description": "Multi-document editor",
     "homepage": "https://apps.kde.org/konsole",
     "license": "LGPL-2.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://cdn.kde.org/ci-builds/utilities/konsole/master/windows/konsole-master-5485-windows-cl-msvc2022-x86_64.7z",
-            "hash": "4281c7e7d4670e304f5552020f56e90d1d5fd37df9f0c0568dc03b45c3a06cd7"
+            "url": "https://cdn.kde.org/ci-builds/utilities/konsole/master/windows/konsole-master-5504-windows-cl-msvc2022-x86_64.7z",
+            "hash": "3a3b65bb32d4a762315d585af027b2c0c832123d9d684752e86bb579f67ecbb5"
         }
     },
     "bin": [
